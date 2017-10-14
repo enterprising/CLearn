@@ -1,7 +1,11 @@
 # Prerequisites
 *.d
+*.out
+*.iml
+*.cmake
 
 # Object files
+*.out
 *.o
 *.ko
 *.obj
