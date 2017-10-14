@@ -82,7 +82,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/enterprising/CLionProjects/MainC/echoServerMain.c">
+		<Unit filename="/Users/enterprising/CLionProjects/MainC/main/echo/echoMultiProgress.c">
+			<Option target="MainC"/>
+		</Unit>
+		<Unit filename="/Users/enterprising/CLionProjects/MainC/main/echo/echoMultiProgressCopy.c">
+			<Option target="MainC"/>
+		</Unit>
+		<Unit filename="/Users/enterprising/CLionProjects/MainC/main/echo/echoServerMain.c">
 			<Option target="MainC"/>
 		</Unit>
 		<Unit filename="/Users/enterprising/CLionProjects/MainC/CMakeLists.txt">

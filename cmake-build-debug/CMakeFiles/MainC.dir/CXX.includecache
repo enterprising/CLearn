@@ -6,7 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/enterprising/CLionProjects/MainC/main.cpp
-iostream
+/Users/enterprising/CLionProjects/MainC/main/util/Test.cpp
+unistd.h
+-
+stdio.h
 -
 

@@ -4,7 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/enterprising/CLionProjects/MainC/echoServerMain.c" "/Users/enterprising/CLionProjects/MainC/cmake-build-debug/CMakeFiles/MainC.dir/echoServerMain.c.o"
+  "/Users/enterprising/CLionProjects/MainC/main/echo/echoMultiProgress.c" "/Users/enterprising/CLionProjects/MainC/cmake-build-debug/CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.o"
+  "/Users/enterprising/CLionProjects/MainC/main/echo/echoMultiProgressCopy.c" "/Users/enterprising/CLionProjects/MainC/cmake-build-debug/CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.o"
+  "/Users/enterprising/CLionProjects/MainC/main/echo/echoServerMain.c" "/Users/enterprising/CLionProjects/MainC/cmake-build-debug/CMakeFiles/MainC.dir/main/echo/echoServerMain.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

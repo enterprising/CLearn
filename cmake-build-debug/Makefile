@@ -123,32 +123,86 @@ MainC/fast:
 	$(MAKE) -f CMakeFiles/MainC.dir/build.make CMakeFiles/MainC.dir/build
 .PHONY : MainC/fast
 
-echoServerMain.o: echoServerMain.c.o
+main/echo/echoMultiProgress.o: main/echo/echoMultiProgress.c.o
 
-.PHONY : echoServerMain.o
+.PHONY : main/echo/echoMultiProgress.o
 
 # target to build an object file
-echoServerMain.c.o:
-	$(MAKE) -f CMakeFiles/MainC.dir/build.make CMakeFiles/MainC.dir/echoServerMain.c.o
-.PHONY : echoServerMain.c.o
+main/echo/echoMultiProgress.c.o:
+	$(MAKE) -f CMakeFiles/MainC.dir/build.make CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.o
+.PHONY : main/echo/echoMultiProgress.c.o
 
-echoServerMain.i: echoServerMain.c.i
+main/echo/echoMultiProgress.i: main/echo/echoMultiProgress.c.i
 
-.PHONY : echoServerMain.i
+.PHONY : main/echo/echoMultiProgress.i
 
 # target to preprocess a source file
-echoServerMain.c.i:
-	$(MAKE) -f CMakeFiles/MainC.dir/build.make CMakeFiles/MainC.dir/echoServerMain.c.i
-.PHONY : echoServerMain.c.i
+main/echo/echoMultiProgress.c.i:
+	$(MAKE) -f CMakeFiles/MainC.dir/build.make CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.i
+.PHONY : main/echo/echoMultiProgress.c.i
 
-echoServerMain.s: echoServerMain.c.s
+main/echo/echoMultiProgress.s: main/echo/echoMultiProgress.c.s
 
-.PHONY : echoServerMain.s
+.PHONY : main/echo/echoMultiProgress.s
 
 # target to generate assembly for a file
-echoServerMain.c.s:
-	$(MAKE) -f CMakeFiles/MainC.dir/build.make CMakeFiles/MainC.dir/echoServerMain.c.s
-.PHONY : echoServerMain.c.s
+main/echo/echoMultiProgress.c.s:
+	$(MAKE) -f CMakeFiles/MainC.dir/build.make CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.s
+.PHONY : main/echo/echoMultiProgress.c.s
+
+main/echo/echoMultiProgressCopy.o: main/echo/echoMultiProgressCopy.c.o
+
+.PHONY : main/echo/echoMultiProgressCopy.o
+
+# target to build an object file
+main/echo/echoMultiProgressCopy.c.o:
+	$(MAKE) -f CMakeFiles/MainC.dir/build.make CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.o
+.PHONY : main/echo/echoMultiProgressCopy.c.o
+
+main/echo/echoMultiProgressCopy.i: main/echo/echoMultiProgressCopy.c.i
+
+.PHONY : main/echo/echoMultiProgressCopy.i
+
+# target to preprocess a source file
+main/echo/echoMultiProgressCopy.c.i:
+	$(MAKE) -f CMakeFiles/MainC.dir/build.make CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.i
+.PHONY : main/echo/echoMultiProgressCopy.c.i
+
+main/echo/echoMultiProgressCopy.s: main/echo/echoMultiProgressCopy.c.s
+
+.PHONY : main/echo/echoMultiProgressCopy.s
+
+# target to generate assembly for a file
+main/echo/echoMultiProgressCopy.c.s:
+	$(MAKE) -f CMakeFiles/MainC.dir/build.make CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.s
+.PHONY : main/echo/echoMultiProgressCopy.c.s
+
+main/echo/echoServerMain.o: main/echo/echoServerMain.c.o
+
+.PHONY : main/echo/echoServerMain.o
+
+# target to build an object file
+main/echo/echoServerMain.c.o:
+	$(MAKE) -f CMakeFiles/MainC.dir/build.make CMakeFiles/MainC.dir/main/echo/echoServerMain.c.o
+.PHONY : main/echo/echoServerMain.c.o
+
+main/echo/echoServerMain.i: main/echo/echoServerMain.c.i
+
+.PHONY : main/echo/echoServerMain.i
+
+# target to preprocess a source file
+main/echo/echoServerMain.c.i:
+	$(MAKE) -f CMakeFiles/MainC.dir/build.make CMakeFiles/MainC.dir/main/echo/echoServerMain.c.i
+.PHONY : main/echo/echoServerMain.c.i
+
+main/echo/echoServerMain.s: main/echo/echoServerMain.c.s
+
+.PHONY : main/echo/echoServerMain.s
+
+# target to generate assembly for a file
+main/echo/echoServerMain.c.s:
+	$(MAKE) -f CMakeFiles/MainC.dir/build.make CMakeFiles/MainC.dir/main/echo/echoServerMain.c.s
+.PHONY : main/echo/echoServerMain.c.s
 
 # Help Target
 help:
@@ -159,9 +213,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... MainC"
-	@echo "... echoServerMain.o"
-	@echo "... echoServerMain.i"
-	@echo "... echoServerMain.s"
+	@echo "... main/echo/echoMultiProgress.o"
+	@echo "... main/echo/echoMultiProgress.i"
+	@echo "... main/echo/echoMultiProgress.s"
+	@echo "... main/echo/echoMultiProgressCopy.o"
+	@echo "... main/echo/echoMultiProgressCopy.i"
+	@echo "... main/echo/echoMultiProgressCopy.s"
+	@echo "... main/echo/echoServerMain.o"
+	@echo "... main/echo/echoServerMain.i"
+	@echo "... main/echo/echoServerMain.s"
 .PHONY : help
 
 

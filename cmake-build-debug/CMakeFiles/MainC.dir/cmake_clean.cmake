@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/MainC.dir/echoServerMain.c.o"
+  "CMakeFiles/MainC.dir/main/echo/echoServerMain.c.o"
+  "CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.o"
+  "CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.o"
   "MainC.pdb"
   "MainC"
 )

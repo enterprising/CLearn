@@ -57,41 +57,93 @@ include CMakeFiles/MainC.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/MainC.dir/flags.make
 
-CMakeFiles/MainC.dir/echoServerMain.c.o: CMakeFiles/MainC.dir/flags.make
-CMakeFiles/MainC.dir/echoServerMain.c.o: ../echoServerMain.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/enterprising/CLionProjects/MainC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/MainC.dir/echoServerMain.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/MainC.dir/echoServerMain.c.o   -c /Users/enterprising/CLionProjects/MainC/echoServerMain.c
+CMakeFiles/MainC.dir/main/echo/echoServerMain.c.o: CMakeFiles/MainC.dir/flags.make
+CMakeFiles/MainC.dir/main/echo/echoServerMain.c.o: ../main/echo/echoServerMain.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/enterprising/CLionProjects/MainC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/MainC.dir/main/echo/echoServerMain.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/MainC.dir/main/echo/echoServerMain.c.o   -c /Users/enterprising/CLionProjects/MainC/main/echo/echoServerMain.c
 
-CMakeFiles/MainC.dir/echoServerMain.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MainC.dir/echoServerMain.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/enterprising/CLionProjects/MainC/echoServerMain.c > CMakeFiles/MainC.dir/echoServerMain.c.i
+CMakeFiles/MainC.dir/main/echo/echoServerMain.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MainC.dir/main/echo/echoServerMain.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/enterprising/CLionProjects/MainC/main/echo/echoServerMain.c > CMakeFiles/MainC.dir/main/echo/echoServerMain.c.i
 
-CMakeFiles/MainC.dir/echoServerMain.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MainC.dir/echoServerMain.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/enterprising/CLionProjects/MainC/echoServerMain.c -o CMakeFiles/MainC.dir/echoServerMain.c.s
+CMakeFiles/MainC.dir/main/echo/echoServerMain.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MainC.dir/main/echo/echoServerMain.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/enterprising/CLionProjects/MainC/main/echo/echoServerMain.c -o CMakeFiles/MainC.dir/main/echo/echoServerMain.c.s
 
-CMakeFiles/MainC.dir/echoServerMain.c.o.requires:
+CMakeFiles/MainC.dir/main/echo/echoServerMain.c.o.requires:
 
-.PHONY : CMakeFiles/MainC.dir/echoServerMain.c.o.requires
+.PHONY : CMakeFiles/MainC.dir/main/echo/echoServerMain.c.o.requires
 
-CMakeFiles/MainC.dir/echoServerMain.c.o.provides: CMakeFiles/MainC.dir/echoServerMain.c.o.requires
-	$(MAKE) -f CMakeFiles/MainC.dir/build.make CMakeFiles/MainC.dir/echoServerMain.c.o.provides.build
-.PHONY : CMakeFiles/MainC.dir/echoServerMain.c.o.provides
+CMakeFiles/MainC.dir/main/echo/echoServerMain.c.o.provides: CMakeFiles/MainC.dir/main/echo/echoServerMain.c.o.requires
+	$(MAKE) -f CMakeFiles/MainC.dir/build.make CMakeFiles/MainC.dir/main/echo/echoServerMain.c.o.provides.build
+.PHONY : CMakeFiles/MainC.dir/main/echo/echoServerMain.c.o.provides
 
-CMakeFiles/MainC.dir/echoServerMain.c.o.provides.build: CMakeFiles/MainC.dir/echoServerMain.c.o
+CMakeFiles/MainC.dir/main/echo/echoServerMain.c.o.provides.build: CMakeFiles/MainC.dir/main/echo/echoServerMain.c.o
+
+
+CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.o: CMakeFiles/MainC.dir/flags.make
+CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.o: ../main/echo/echoMultiProgressCopy.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/enterprising/CLionProjects/MainC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.o   -c /Users/enterprising/CLionProjects/MainC/main/echo/echoMultiProgressCopy.c
+
+CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/enterprising/CLionProjects/MainC/main/echo/echoMultiProgressCopy.c > CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.i
+
+CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/enterprising/CLionProjects/MainC/main/echo/echoMultiProgressCopy.c -o CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.s
+
+CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.o.requires:
+
+.PHONY : CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.o.requires
+
+CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.o.provides: CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.o.requires
+	$(MAKE) -f CMakeFiles/MainC.dir/build.make CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.o.provides.build
+.PHONY : CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.o.provides
+
+CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.o.provides.build: CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.o
+
+
+CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.o: CMakeFiles/MainC.dir/flags.make
+CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.o: ../main/echo/echoMultiProgress.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/enterprising/CLionProjects/MainC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.o   -c /Users/enterprising/CLionProjects/MainC/main/echo/echoMultiProgress.c
+
+CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/enterprising/CLionProjects/MainC/main/echo/echoMultiProgress.c > CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.i
+
+CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/enterprising/CLionProjects/MainC/main/echo/echoMultiProgress.c -o CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.s
+
+CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.o.requires:
+
+.PHONY : CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.o.requires
+
+CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.o.provides: CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.o.requires
+	$(MAKE) -f CMakeFiles/MainC.dir/build.make CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.o.provides.build
+.PHONY : CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.o.provides
+
+CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.o.provides.build: CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.o
 
 
 # Object files for target MainC
 MainC_OBJECTS = \
-"CMakeFiles/MainC.dir/echoServerMain.c.o"
+"CMakeFiles/MainC.dir/main/echo/echoServerMain.c.o" \
+"CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.o" \
+"CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.o"
 
 # External object files for target MainC
 MainC_EXTERNAL_OBJECTS =
 
-MainC: CMakeFiles/MainC.dir/echoServerMain.c.o
+MainC: CMakeFiles/MainC.dir/main/echo/echoServerMain.c.o
+MainC: CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.o
+MainC: CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.o
 MainC: CMakeFiles/MainC.dir/build.make
 MainC: CMakeFiles/MainC.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/enterprising/CLionProjects/MainC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable MainC"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/enterprising/CLionProjects/MainC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable MainC"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MainC.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -99,7 +151,9 @@ CMakeFiles/MainC.dir/build: MainC
 
 .PHONY : CMakeFiles/MainC.dir/build
 
-CMakeFiles/MainC.dir/requires: CMakeFiles/MainC.dir/echoServerMain.c.o.requires
+CMakeFiles/MainC.dir/requires: CMakeFiles/MainC.dir/main/echo/echoServerMain.c.o.requires
+CMakeFiles/MainC.dir/requires: CMakeFiles/MainC.dir/main/echo/echoMultiProgressCopy.c.o.requires
+CMakeFiles/MainC.dir/requires: CMakeFiles/MainC.dir/main/echo/echoMultiProgress.c.o.requires
 
 .PHONY : CMakeFiles/MainC.dir/requires
 

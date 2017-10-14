@@ -10,7 +10,7 @@
 #define PORT 54329      //端口号
 #define MAX_CONN_SIZE 5  //最大连接数
 
-// 服务端代码，实现 echo server
+// 服务端代码，实现 echo server。单进程版
 
 /**
  * 创建 Socket，绑定地址三元组，并开始监听
