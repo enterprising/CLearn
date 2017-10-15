@@ -31,7 +31,7 @@ int main() {
     int socketID, clientSocketID;
     struct sockaddr_in socketAddr;
 
-    int child_pid;
+    pid_t child_pid;
 
     printf("starting server..\n");
 

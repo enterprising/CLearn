@@ -204,6 +204,33 @@ main/echo/echoServerMain.c.s:
 	$(MAKE) -f CMakeFiles/MainC.dir/build.make CMakeFiles/MainC.dir/main/echo/echoServerMain.c.s
 .PHONY : main/echo/echoServerMain.c.s
 
+main/echo/echoServerReview.o: main/echo/echoServerReview.c.o
+
+.PHONY : main/echo/echoServerReview.o
+
+# target to build an object file
+main/echo/echoServerReview.c.o:
+	$(MAKE) -f CMakeFiles/MainC.dir/build.make CMakeFiles/MainC.dir/main/echo/echoServerReview.c.o
+.PHONY : main/echo/echoServerReview.c.o
+
+main/echo/echoServerReview.i: main/echo/echoServerReview.c.i
+
+.PHONY : main/echo/echoServerReview.i
+
+# target to preprocess a source file
+main/echo/echoServerReview.c.i:
+	$(MAKE) -f CMakeFiles/MainC.dir/build.make CMakeFiles/MainC.dir/main/echo/echoServerReview.c.i
+.PHONY : main/echo/echoServerReview.c.i
+
+main/echo/echoServerReview.s: main/echo/echoServerReview.c.s
+
+.PHONY : main/echo/echoServerReview.s
+
+# target to generate assembly for a file
+main/echo/echoServerReview.c.s:
+	$(MAKE) -f CMakeFiles/MainC.dir/build.make CMakeFiles/MainC.dir/main/echo/echoServerReview.c.s
+.PHONY : main/echo/echoServerReview.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -222,6 +249,9 @@ help:
 	@echo "... main/echo/echoServerMain.o"
 	@echo "... main/echo/echoServerMain.i"
 	@echo "... main/echo/echoServerMain.s"
+	@echo "... main/echo/echoServerReview.o"
+	@echo "... main/echo/echoServerReview.i"
+	@echo "... main/echo/echoServerReview.s"
 .PHONY : help
 
 

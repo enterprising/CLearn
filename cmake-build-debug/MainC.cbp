@@ -91,6 +91,9 @@
 		<Unit filename="/Users/enterprising/CLionProjects/MainC/main/echo/echoServerMain.c">
 			<Option target="MainC"/>
 		</Unit>
+		<Unit filename="/Users/enterprising/CLionProjects/MainC/main/echo/echoServerReview.c">
+			<Option target="MainC"/>
+		</Unit>
 		<Unit filename="/Users/enterprising/CLionProjects/MainC/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

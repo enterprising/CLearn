@@ -11,6 +11,7 @@ set(SOURCE_FILES
         main/echo/echoServerMain.c
         main/echo/echoMultiProgressCopy.c
         main/echo/echoMultiProgress.c
+        main/echo/echoServerReview.c
         #        main/util/Test.cpp
         )
 add_executable(MainC ${SOURCE_FILES})
