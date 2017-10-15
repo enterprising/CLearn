@@ -9,9 +9,11 @@ set(SOURCE_FILES
         #        helper.h
         #        echo.c
         main/echo/echoServerMain.c
-        main/echo/echoMultiProgressCopy.c
+        main/reference/echoMultiProgressCopy.c
         main/echo/echoMultiProgress.c
         main/echo/echoServerReview.c
+        main/reference/echoMultiThread.c
+        main/echo/echoTreadsTest.cpp
         #        main/util/Test.cpp
         )
 add_executable(MainC ${SOURCE_FILES})

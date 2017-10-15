@@ -1,6 +1,6 @@
 # Prerequisites
-.cmake-build-debug/
-.idea/
+cmake-build-debug/
+idea/
 *.d
 *.out
 *.iml
