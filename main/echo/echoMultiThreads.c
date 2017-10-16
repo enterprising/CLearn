@@ -11,6 +11,8 @@
 #include <stdlib.h>
 #include <pthread.h>
 
+#define backlog 5
+
 void *echo(void *argv) {
     //获取传进来的参数
     int *clientID_Temp = (int *) argv;
@@ -27,24 +29,46 @@ void *echo(void *argv) {
 }
 
 int main(int argc, char *argv[]) {
-
-    int prot = atoi(argv[1]);
-    int socketID;
+    int port = 1234;  //默认端口
+    int sockfd;
     struct sockaddr_in servAddr;
+    int ref = 0;
 
-    socketID = socket(AF_INET, SOCK_STREAM, 0);
+    sockfd = socket(AF_INET, SOCK_STREAM, 0);
+    if (sockfd < 0) {
+        perror("socket error!");
+        exit(-1);
+    }
+
+    if (argv[1] != NULL)
+        port = atoi(argv[1]);
     servAddr.sin_family = AF_INET;
-    servAddr.sin_port = htons(prot);  //将本地的无符号短整型变为 网络字节序
-
+    servAddr.sin_port = htons(port);  //将本地的无符号短整型变为 网络字节序
     //INADDR_ANY就是指定地址为0.0.0.0的地址，这个地址事实上表示不确定地址
     servAddr.sin_addr.s_addr = htonl(INADDR_ANY); //将本地的无符号长整型变为 网络字节序；
 
-    bind(socketID, (struct sockaddr *) &servAddr, sizeof(servAddr));
-    listen(socketID, 10);
+    ref = bind(sockfd, (struct sockaddr *) &servAddr, sizeof(servAddr));
+    if (ref < 0) {
+        perror("bind socket error!");
+        exit(-1);
+    }
+    ref = listen(sockfd, backlog);
+    if (ref < 0) {
+        perror("listen socket error!");
+        exit(-1);
+    }
 
     while (1) {
-        int clientID = accept(socketID, NULL, NULL);
+        int clientID = accept(sockfd, NULL, NULL);
+        if (clientID < 0) {
+            perror("accept error");
+            exit(-1);
+        }
         pthread_t clientThread;
         pthread_create(&clientThread, NULL, &echo, &clientID);
+        if (clientThread < 0) {
+            perror("create thread error!");
+            exit(-1);
+        }
     }
 }

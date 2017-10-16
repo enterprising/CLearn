@@ -11,69 +11,86 @@
 #include <stdlib.h>
 
 #define BUFFER_SIZE 1024 //缓冲区长度
-#define PORT 54321      //端口号
-#define MAX_CONN_SIZE 5  //最大连接数
+#define backlog 5  // 排队等待Socket连接的最大数目
 
 /**
  * 读取客户端Socket发来的信息，并处理、最后返回
  * @param client
  */
-void echo(int socketID_Client) {
+void echo(int client_sockfd) {
     char receiveBuff[BUFFER_SIZE];
     memset(receiveBuff, 0, sizeof(receiveBuff));
-    while (recv(socketID_Client, receiveBuff, sizeof(receiveBuff), 0) > 0) {
+    while (recv(client_sockfd, receiveBuff, sizeof(receiveBuff), 0) > 0) {
         printf("received: %s", receiveBuff);
-        send(socketID_Client, receiveBuff, strlen(receiveBuff), 0);
+        send(client_sockfd, receiveBuff, strlen(receiveBuff), 0);
         memset(receiveBuff, 0, sizeof(receiveBuff));
     }
-    close(socketID_Client);
+    close(client_sockfd);
 }
 
-int main() {
-    int socketID, clientSocketID;
-    struct sockaddr_in socketAddr;
+int main(int argc, char *argv[]) {
+    int port = 1234;
+    int sockfd, client_sockfd;
+    int ret = 0;
+    struct sockaddr_in serv_addr;
+
+    if (argv[1] != NULL)
+        port = atoi(argv[1]);
 
     pid_t child_pid;
 
     printf("starting server..\n");
 
-    socketID = socket(AF_INET, SOCK_STREAM, 0);
-    memset(&socketAddr, 0, sizeof(socketAddr));
+    sockfd = socket(AF_INET, SOCK_STREAM, 0);
+    if (sockfd < 0) {
+        perror("socket() error!");
+        exit(-1);
+    }
+    memset(&serv_addr, 0, sizeof(serv_addr));
 
-    socketAddr.sin_family = AF_INET;
-    socketAddr.sin_addr.s_addr = htonl(INADDR_ANY);
-    socketAddr.sin_port = htons(PORT);
+    serv_addr.sin_family = AF_INET;
+    serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
+    serv_addr.sin_port = htons(port);
 
-    bind(socketID, (struct sockaddr *) &socketAddr, sizeof(socketAddr));
-    listen(socketID, MAX_CONN_SIZE);
+    ret = bind(sockfd, (struct sockaddr *) &serv_addr, sizeof(serv_addr));
+    if (ret < 0) {
+        perror("bind socket error!");
+        exit(-1);
+    }
+
+    ret = listen(sockfd, backlog);
+    if (ret < 0) {
+        perror("listen socket error");
+        exit(-1);
+    }
+
     struct sockaddr_in clientAddress; //保存用户Socket信息
     memset(&clientAddress, '0', sizeof(clientAddress));
     socklen_t cli_len;
 
-    if (socketID > 0)
-        printf("Socket建立成功，正在监听...\n");
-
     cli_len = sizeof(clientAddress);
     while (1) {
-        clientSocketID = accept(socketID, (struct sockaddr *) &clientAddress, &cli_len);
+        client_sockfd = accept(sockfd, (struct sockaddr *) &clientAddress, &cli_len);
+
+        if (client_sockfd < 0) {
+            perror("accept error!");
+            exit(-1);
+        }
 
         child_pid = fork();  // fork()出一个子进程
         printf("child_pid = %d\n", child_pid);
         if (child_pid < 0) {
-            perror("fork() 出问题了！");
+            perror("fork progress error!");
             exit(-1);
         }
         // 这里表示，父进程 继续监听连接。continue后面的由子进程处理
         if (child_pid != 0) {
-            close(clientSocketID);
+            close(client_sockfd);
             continue;
         }
-        if (clientSocketID < 0) {
-            fprintf(stderr, "ECHOSERV: Error calling accept()\n");
-            exit(EXIT_FAILURE);
-        }
+
         printf("client id:%s, port:%d\n", inet_ntoa(clientAddress.sin_addr), ntohs(clientAddress.sin_port));
-        echo(clientSocketID);
+        echo(client_sockfd);
         exit(0);
     }
 
