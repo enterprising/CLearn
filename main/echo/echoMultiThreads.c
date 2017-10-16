@@ -1,13 +1,15 @@
 //
 // 多线程版 echo 服务
-// Created by enterprising on 17/10/15.
+// Created by peng.tan on 17/10/15.
 //
-#include <cstdlib>
+#include <sys/socket.h>
 #include <netinet/in.h>
-#include <pthread.h>
-#include <strings.h>
+#include <arpa/inet.h>
 #include <stdio.h>
-#include <zconf.h>
+#include <unistd.h>
+#include <string.h>
+#include <stdlib.h>
+#include <pthread.h>
 
 void *echo(void *argv) {
     //获取传进来的参数

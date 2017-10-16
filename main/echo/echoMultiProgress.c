@@ -1,3 +1,7 @@
+//
+// 多进程版 echo 服务
+// Created by peng.tan on 17/10/15.
+//
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
@@ -9,8 +13,6 @@
 #define BUFFER_SIZE 1024 //缓冲区长度
 #define PORT 54321      //端口号
 #define MAX_CONN_SIZE 5  //最大连接数
-
-// 服务端代码，实现 echo server。单进程版
 
 /**
  * 读取客户端Socket发来的信息，并处理、最后返回
