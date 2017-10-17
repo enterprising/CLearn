@@ -15,14 +15,14 @@ int main(int argc, char *argv[]) {
 
     int port = atoi(argv[1]);
 
-    int socketId, clientSocktId;
+    int sockfd, clientSocktId;
     pid_t childId;
     char buf[1024];
 
     struct sockaddr_in sockAddr;
 
-    socketId = socket(AF_INET, SOCK_STREAM, 0);
-    if (socketId < 0) {
+    sockfd = socket(AF_INET, SOCK_STREAM, 0);
+    if (sockfd < 0) {
         perror("socket()");
         exit(-1);
     }
@@ -32,20 +32,20 @@ int main(int argc, char *argv[]) {
     sockAddr.sin_family = AF_INET;
     sockAddr.sin_addr.s_addr = htonl(INADDR_ANY);
 
-    int b = bind(socketId, (struct sockaddr *) &sockAddr, sizeof(sockAddr));
+    int b = bind(sockfd, (struct sockaddr *) &sockAddr, sizeof(sockAddr));
     if (b < 0) {
         perror("bind()");
         exit(-1);
     }
 
-    int l = listen(socketId, 6);
+    int l = listen(sockfd, 6);
     if (l < 0) {
         perror("listen()");
         exit(-1);
     }
 
     while (1) {
-        clientSocktId = accept(socketId, NULL, NULL);
+        clientSocktId = accept(sockfd, NULL, NULL);
         if (clientSocktId != 0) {
             //创建子进程来处理这个连接上的信息
             childId = fork();

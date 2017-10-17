@@ -12,7 +12,7 @@ void usage(char *proc_name) {
 }
 
 int main(int argc, char **argv) {
-    int sockfd, clientSocketID;
+    int sockfd, client_sockfd;
 
     //sockaddr_in is used to describe internet(IPV4) socket address
     struct sockaddr_in server_in_addr;
@@ -68,8 +68,8 @@ int main(int argc, char **argv) {
     }
     while (1) {
         //accept will block until a client connect to the server
-        clientSocketID = accept(sockfd, NULL, NULL);
-        if (clientSocketID < 0) {
+        client_sockfd = accept(sockfd, NULL, NULL);
+        if (client_sockfd < 0) {
             perror("accept()");
             exit(-1);
         }
@@ -81,15 +81,15 @@ int main(int argc, char **argv) {
         }
         //parent process, continue accept connections
         if (child_pid != 0) {
-            close(clientSocketID);
+            close(client_sockfd);
             continue;
         }
 
-        printf("Connect fd = %d\n", clientSocketID);
+        printf("Connect fd = %d\n", client_sockfd);
         memset(buf, 0, sizeof(buf));
 
         //read from the client until client close/or send EOF
-        while ((ret = read(clientSocketID, buf, (size_t) MAX_BUF_SIZE)) && ret != EOF) {
+        while ((ret = read(client_sockfd, buf, (size_t) MAX_BUF_SIZE)) && ret != EOF) {
             if (ret < 0) {
                 perror("read()");
                 exit(-1);
@@ -97,13 +97,13 @@ int main(int argc, char **argv) {
             //printf("Get data %s\n", buf);
 
             //write back to the client
-            ret = write(clientSocketID, buf, strlen(buf) * sizeof(char));
+            ret = write(client_sockfd, buf, strlen(buf) * sizeof(char));
             if (ret < 0) {
                 perror("write()");
                 exit(-1);
             }
         }
-        ret = close(clientSocketID);
+        ret = close(client_sockfd);
         if (ret) {
             perror("close()");
         }

@@ -13,15 +13,15 @@
 
 void *str_echo(void *argv) {
     int *pcommu = (int *) argv;
-    int clientSocketID = *pcommu;
+    int client_sockfd = *pcommu;
 
     char buf[MAXLINE];
 
-    while (recv(clientSocketID, buf, MAXLINE, 0) > 0) {
+    while (recv(client_sockfd, buf, MAXLINE, 0) > 0) {
         printf("receive:%s", buf);
-        send(clientSocketID, buf, strlen(buf), 0);
+        send(client_sockfd, buf, strlen(buf), 0);
     }
-    close(clientSocketID);
+    close(client_sockfd);
     return NULL;
 }
 
@@ -41,9 +41,9 @@ int main() {
     listen(socktID, LISTENQ);
 
     while (1) {
-        int clientSocketID = accept(socktID, NULL, NULL);
+        int client_sockfd = accept(socktID, NULL, NULL);
         pthread_t communication; //通信线程
-        pthread_create(&communication, NULL, &str_echo, &clientSocketID);
+        pthread_create(&communication, NULL, &str_echo, &client_sockfd);
     }
 
 }
