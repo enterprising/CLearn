@@ -27,8 +27,9 @@ int main(int argc, char *argv[]) {
         exit(-1);
     }
 
+    // 这是 open 的第二个参数，代表访问模式，有只读、只写、读写三种
     openFlags = O_CREAT | O_WRONLY | O_TRUNC;
-    // 这个参数代表权限
+    // 这是 open 的第三个参数，只有当上面是 O_CREATE 的时候才需要加上，代表文件的访问权限
     filePerms = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH;  //rw-rw-rw-
 
     outputFd = open(pathname_write, openFlags, filePerms);
