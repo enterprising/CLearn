@@ -4,11 +4,12 @@ project(MainC)
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
-#        main/echo/echoServerMain.c
-#        main/echo/echoMultiProgress.c
-#        main/reference/echoMultiThread.c
-#        main/fileio/seek_io.c
-        main/process/men_segments.c
+        #        main/echo/echoServerMain.c
+        #        main/echo/echoMultiProgress.c
+        #        main/reference/echoMultiThread.c
+        #        main/fileio/seek_io.c
+        #        main/process/men_segments.c
+        main/process/display_env.c
         #        echoserver.c
         #        helper.c
         #        helper.h
