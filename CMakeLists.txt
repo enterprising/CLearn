@@ -9,7 +9,11 @@ set(SOURCE_FILES
         #        main/reference/echoMultiThread.c
         #        main/fileio/seek_io.c
         #        main/process/men_segments.c
-        main/process/display_env.c
+        #        main/process/display_env.c
+        #        main/process/t_fork.c
+        #        main/process/fork_file_sharing.c
+        #        main/process/t_vfork.c
+        main/process/fork_sig_sync.c
         #        echoserver.c
         #        helper.c
         #        helper.h
