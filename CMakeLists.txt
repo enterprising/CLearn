@@ -13,7 +13,7 @@ set(SOURCE_FILES
         #        main/process/t_fork.c
         #        main/process/fork_file_sharing.c
         #        main/process/t_vfork.c
-        main/process/fork_sig_sync.c
+        #        main/process/fork_sig_sync.c
         #        echoserver.c
         #        helper.c
         #        helper.h
@@ -22,5 +22,6 @@ set(SOURCE_FILES
         #        main/other/echoServerReview.c
         #        main/other/echoTreadsTest.cpp
         #        main/util/Test.cpp
+        main/code/T3.c
         )
 add_executable(MainC ${SOURCE_FILES})
